@@ -78,4 +78,38 @@
 ### 7.8 CREATE절에서의 SubQUERY
 ### 7.9 DML문에서의 SubQUERY
 
+## 8. CONSTRAINT
+### 8.1 Constraint의 개념
+### 8.2 Constraint 정의 방법
+### 8.3 Constraint 종류
+### 8.4 PRIMARY KEY 제약 조건
+### 8.5 FOREIGN KEY 제약 조건
+### 8.6 FOREIGN KEY 제약 조건을 줄 때 주의사항
+### 8.7 CHECK 제약 조건
+### 8.8 데이터 조작 시 CONSTRAIN의 적용
+
+## 9. TRANSACTION CONTROL
+### 9.1 TRANSACTION의 개념
+### 9.2 TRANSACTION CONTROL
+### 9.3 명시적인(Explict) 트랜잭션 제어 명령어
+### 9.4 암시적인(Implicit) 트랜잭션 제어 명령어
+### 9.5 COMMIT, ROLLBACK 이전의 데이터 상태
+### 9.6 COMMIT후의 데이터 상태
+### 9.7 ROLLBACK 후의 데이터 상태
+### 9.8 SAVEPOINT를 이용한 ROLLBACK
+
+## 10. DICTIONARY
+### 10.1 DICTIONARY란?
+### 10.2 DICTIONARY의 예
+### 10.3 DICTIONARY VIEW의 종류
+### 10.4 그 밖의 VIEW
+### 10.5 DICTIONARY 검색
+
+## 11. 데이터 정의어(DDL)
+### 11.1 명령어의 종류 및 설명
+### 11.2 테이블 삭제
+### 11.3 컬럼의 추가
+### 11.4 컬럼의 수정
+### 11.5 Constraint의 변경
+### 11.6 그 외의 DDL
 
