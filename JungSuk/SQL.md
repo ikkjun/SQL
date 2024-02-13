@@ -113,3 +113,27 @@
 ### 11.5 Constraint의 변경
 ### 11.6 그 외의 DDL
 
+## 12. 데이터 제어어(DCL)
+### 12.1 Database Security
+### 12.2 권한(Privilege)과 역할(Role)
+### 12.3 System Privileges
+### 12.4 Object Privileges
+### 12.5 Role
+### 12.6 Role의 생성
+### 12.7 Privileges 및 Role에 관한 Dictionary
+
+## 13. OBJECT
+### 13.1 Object의 종류 및 기능
+### 13.2 SEQUENCE란?
+### 13.3 SEQUENCE 생성하기
+### 13.4 SEQUENCE 생성 확인
+### 13.5 SEQUENCE 사용법
+### 13.6 SEQUENCE 사용 규칙
+### 13.7 SEQUENCE의 변경과 삭제
+### 13.8 인덱스(Index)의 개념
+### 13.9 Index의 생성 방법에 따른 종류
+### 13.10 인덱스의 구조
+### 13.11 B*Tree의 특징
+### 13.12 Oracle에서 제공하는 최적화 방법
+### 13.13 Index의 생성 및 삭제
+### 13.14 인덱스 생성을 위한 지침
