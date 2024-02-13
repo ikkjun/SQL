@@ -47,3 +47,35 @@
 ### 4.11 함수를 여러 개 겹쳐서 사용하기
 ### 4.12 그룹함수의 종류 및 사용 목적
 
+## 5. SUBGROUP으로 데이터 분류
+### 5.1 GROUP BY와 HAVING절
+### 5.2 GROUP BY절
+### 5.3 SELECT절에서 GROUP함수의 잘못된 사용
+### 5.4 WHERE절에서 GROUP함수의 잘못된 사용
+### 5.5 HAVING절
+### 5.6 GROUP을 SUBGROUP으로 세분화 하기
+
+## 6. JOIN
+### 6.1 JOIN의 개념
+### 6.2 JOIN의 종류
+### 6.3 EQUIJOIN
+### 6.4 EQUIJOIN의 예
+### 6.5 칼럼과 테이블의 ALIAS 사용
+### 6.6 NON-EQUIJOIN
+### 6.7 OUTER JOIN
+### 6.8 SELF JOIN
+### 6.9 SET 연산자
+### 6.10 SET 연산자의 종류
+
+## 7. SubQUERY
+### 7.1 SUBQUERY의 개념
+### 7.2 SUBQUERY의 문형
+### 7.3 Single Row SubQUERY
+### 7.4 Multi Row SubQUERY
+### 7.5 Multi-column SubQUERY
+### 7.6 FROM절에서의 SubQUERY
+### 7.7 HAVING절에서의 SubQUERY
+### 7.8 CREATE절에서의 SubQUERY
+### 7.9 DML문에서의 SubQUERY
+
+
