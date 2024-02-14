@@ -137,3 +137,15 @@
 ### 13.12 Oracle에서 제공하는 최적화 방법
 ### 13.13 Index의 생성 및 삭제
 ### 13.14 인덱스 생성을 위한 지침
+### 13.15 View란?
+### 13.16 View의 생성
+### 13.17 View에 대한 DML문 사용 규칙
+### 13.18 View생성에 사용되는 Option
+### 13.19 View의 확인 및 삭제
+### 13.20 SYNONYM
+
+### 14. ADVANCED SQL
+14.1 NVL FUNCTION
+14.2 DECODE FUNCTION
+14.3 CASE 문
+14.4 PIVOT함수
