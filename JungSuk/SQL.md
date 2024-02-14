@@ -144,9 +144,18 @@
 ### 13.19 View의 확인 및 삭제
 ### 13.20 SYNONYM
 
-### 14. ADVANCED SQL
-14.1 NVL FUNCTION
-14.2 DECODE FUNCTION
-14.3 CASE 문
-14.4 PIVOT함수
-14.5 ROLLUP 함수
+## 14. ADVANCED SQL
+### 14.1 NVL FUNCTION
+### 14.2 DECODE FUNCTION
+### 14.3 CASE 문
+### 14.4 PIVOT 함수
+### 14.5 ROLLUP 함수
+### 14.6 CUBE 함수
+### 14.7 RANK 함수
+### 14.8 CORRELATED SUBQUERY
+### 14.9 Multi Row Comparison Operator
+### 14.10 PSEUDO COLUMN
+### 14.11 INDEX의 효율적 사용
+### 14.12 자동 실행 프로그램 - TRIGGER
+### 14.13 TRIGGER의 문형
+
