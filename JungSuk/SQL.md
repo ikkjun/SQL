@@ -2,6 +2,8 @@
 ## 1. Introduction
 ### 1.1 관계형 데이터베이스(RDB)
 ### 1.2 데이터 베이스 용어
+- 개념
+- 오브젝트
 ### 1.3 SQL, SQL*PLUS, PL/SQL의 비교
 ### 1.4 Oracle DB의 기본 계정(account)
 ### 1.5 DBMS에 접속하기
