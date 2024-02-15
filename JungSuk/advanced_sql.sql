@@ -14,3 +14,9 @@ select rowid, rownum, v.*
 from s_emp v
 order by name -- 순서가 맞는다는 보장이 없다
 ;
+
+select /* + FULL(s_emp)*/ rowid, rownum, s_emp.*
+from s_emp
+where rownum <= 5
+order by name
+;
