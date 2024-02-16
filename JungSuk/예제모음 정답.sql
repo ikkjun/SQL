@@ -99,6 +99,17 @@ where e.salary between s.losal and hisal
 ;
 
 -- 26. 직원(S_EMP)테이블과 고객(S_CUSTOMER)테이블에서 사원의 이름과 사번, 그리고 각 사원의 담당고객 이름을 나타내시요. 단, 고객에 대하여 담당영업사원이 없더라도 모든 고객의 이름을 나타내고, 사번 순으로 오름차순 정렬하시오.
+select e.name 사원이름, e.id 사번, c.name 담당고객
+from s_emp e, s_customer c
+where c.sales_rep_id = e.id(+)
+order by 사번
+;
+
+-- 27. 직원 중에 '김정미' 와 같은 직책(title)을 가지는 사원의 이름과 직책, 급여, 부서번호를 나타내시오(SELF JOIN을 사용할 것)
+
+select *
+from s_customer
+;
 
 select * from salgrade;
 
