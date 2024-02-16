@@ -207,6 +207,14 @@ from (select rownum rnum, name, salary
 where rnum >= 6
 ;
 
+-- 38. 시퀀스 s_emp_id 생성해라. 단 시퀀스는 1씩 증가하고, 26부터 시작하며, 최대값은 9999999이고, 미리 만들어 놓지 말고, 반복은 하지 않도록 작성해라.
+create sequence s_emp_id
+    increment by 1
+    start with 26
+    maxvalue 9999999
+    nocache
+    nocycle
+;
 -- 테이블 목록
 select *
 from s_emp
