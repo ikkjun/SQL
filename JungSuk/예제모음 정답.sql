@@ -220,6 +220,55 @@ create sequence s_emp_id
 create index name_index
 on f_emp(name);
 
+-- 40. decode 함수 이용해서 S_EMP테이블에서 각 사원의 이름과 급여, 급여등급을 나타내시오. 급여가 4000만원 이상이면 A등급, 3000만원 이상이면 B등급, 2000만원 이상이면 C등급, 1000만원 이상이면 D등급, 1000만원 이상이면 E등급으로 나타내시오.
+select name 사원이름, salary 급여, decode(trunc(salary/1000),0,'E',1,'D',2,'C',3,'B','A') 급여등급
+from s_emp
+;
+
+-- 41. case문을 사용해서 id, name 컬럼과 salary가 1000미만인 경우 very low,  2500이하인 경우 low, 5000이상인 경우 high 나머지는 medium입력되는 컬럼 작성하기
+select id, name,
+    (case 
+        when salary < 1000 then 'very low'
+        when salary <= 2500 then 'low'
+        when salary >= 5000 then 'high'
+        else 'medium'
+    end) 급여등급
+from s_emp
+;
+
+-- 42. 부서별 title인원을 구하시오. 없으면 0으로 표시해라.('사장', '기획부장', '영업부장', '총무부장', '인사부장', '과장', '영업대표이사', '사원')
+select *
+from (select dept_id, title 
+        from s_emp)
+pivot (
+        count(*)
+        for title
+        in('사장', '부장', '과장', '영업대표이사', '사원') --'기획부장', '영업부장', '총무부장', '인사부장'
+)
+order by dept_id
+;
+
+-- 43. rollup를 사용해서 dept_id가 106, 112, 113인 직원의 dept_id와 title별 인원수를 출력하라.
+select dept_id, title, count(*)
+from s_emp
+where dept_id in (106,112,113)
+group by rollup(dept_id, title)
+order by dept_id
+;
+
+-- 44. cube를 사용해서 dept_id가 106, 112, 113인 직원의 dept_id와 title별 인원수를 출력하라.
+select dept_id, title, count(*)
+from s_emp
+where dept_id in (106,112,113)
+group by cube(dept_id, title)
+order by dept_id
+;
+
+-- 45. salary가 높은 사람이 1등이 되도록 id, name, salary, rank 칼럼을 작성하시오.
+select id, name, salary, rank() over (order by salary desc) rank
+from s_emp
+;
+
 -- 테이블 목록
 select *
 from s_emp
