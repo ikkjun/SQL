@@ -136,8 +136,28 @@ where dept_id = (
     )
 ;
 
--- 30. s_emp 테이블에서 지역 번호가 3인 직원의 id와 dept_id와 동일한 직원들의 이름, dept_id를 출력하시오.
+-- 30. s_dept 테이블에서 지역 번호가 3인 부서의 id가 s_emp테이블에서 dept_id와 동일한 직원들의 이름과 dept_id를 출력하시오.
+select name, dept_id
+from s_emp
+where dept_id in (
+    select id
+    from s_dept
+    where region_id = 3
+    )
+;
 
+-- 31. s_emp 테이블에서 부서별로 가장 적은 salary를 받는 직원의 name과 salary를 통해 직원의 name, dept_id, salary를 출력하시오.
+select name, dept_id, salary
+from s_emp
+where (dept_id, salary) in (
+    select dept_id, min(salary)
+    from s_emp
+    group by dept_id
+    )
+;
+
+
+-- 테이블 목록
 select *
 from s_customer
 ;
