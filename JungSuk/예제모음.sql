@@ -68,3 +68,5 @@
 -- 30. s_emp 테이블에서 지역 번호가 3인 직원의 id와 dept_id와 동일한 직원들의 이름, dept_id를 출력하시오.
 
 -- 31. s_emp 테이블에서 부서별로 가장 적은 salary를 받는 직원의 name과 salary를 통해 직원의 name, dept_id, salary를 출력하시오.
+
+-- 32. inline view로 s_emp 테이블에서 사원인 직원들의 부서번호를 s_dept 테이블에서 찾아 직원들의 name, title, 부서명(name)을 출력하시오.
