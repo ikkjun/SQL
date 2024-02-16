@@ -197,9 +197,15 @@ set dept_id = (select dept_id
 where name = '안창환'
 ;
 
-
-
-
+-- 37. s_emp 테이블에서 봉급 순위 6등부터 10등까지 가져오기
+select *
+from (select rownum rnum, name, salary
+        from (select name, salary
+                from s_emp
+                order by salary desc, name)
+        where rownum <= 10)
+where rnum >= 6
+;
 
 -- 테이블 목록
 select *
