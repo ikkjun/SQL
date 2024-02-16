@@ -93,6 +93,14 @@ and r.name like '서울%'
 ;
 
 -- 25. 직원 테이블(S_EMP)과 급여 테이블(SALGRADE)을 JOIN하여 사원의 이름과 급여, 그리고 해당 급여등급을 나타내시오.
+select e.name 이름, e.salary 급여, s.grade 급여등급
+from s_emp e, salgrade s
+where e.salary between s.losal and hisal
+;
+
+-- 26. 직원(S_EMP)테이블과 고객(S_CUSTOMER)테이블에서 사원의 이름과 사번, 그리고 각 사원의 담당고객 이름을 나타내시요. 단, 고객에 대하여 담당영업사원이 없더라도 모든 고객의 이름을 나타내고, 사번 순으로 오름차순 정렬하시오.
+
+select * from salgrade;
 
 select *
 from s_emp
