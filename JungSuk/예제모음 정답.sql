@@ -215,6 +215,11 @@ create sequence s_emp_id
     nocache
     nocycle
 ;
+
+-- 39. s_emp 테이블의 이름 컬럼에 인덱스 생성하시오.
+create index name_index
+on f_emp(name);
+
 -- 테이블 목록
 select *
 from s_emp
