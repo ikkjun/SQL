@@ -126,6 +126,18 @@ where dept_id = 113
 order by 1
 ;
 
+-- 29. s_emp 테이블에서 김정미와 같은 dept_id를 갖는 직원명, 직급, dept_id를 출력하시오.
+select *
+from s_emp
+where dept_id = (
+    select dept_id
+    from s_emp
+    where name = '김정미'
+    )
+;
+
+-- 30. s_emp 테이블에서 지역 번호가 3인 직원의 id와 dept_id와 동일한 직원들의 이름, dept_id를 출력하시오.
+
 select *
 from s_customer
 ;
