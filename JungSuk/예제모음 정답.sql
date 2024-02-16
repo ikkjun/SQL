@@ -85,6 +85,14 @@ where d.id = e.dept_id
 ;
 
 -- 24. 서울 지역에 근무하는 사원에 대해 각 사원의 이름과 근무하는 부서명을 나타내시오.
+select e.name 이름, d.name 부서명
+from s_emp e, s_dept d, s_region r
+where r.id = d.region_id
+and d.id = e.dept_id
+and r.name like '서울%'
+;
+
+-- 25. 직원 테이블(S_EMP)과 급여 테이블(SALGRADE)을 JOIN하여 사원의 이름과 급여, 그리고 해당 급여등급을 나타내시오.
 
 select *
 from s_emp
@@ -92,4 +100,8 @@ from s_emp
 
 select *
 from s_dept
+;
+
+select *
+from s_region
 ;
