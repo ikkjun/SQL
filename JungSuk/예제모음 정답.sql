@@ -53,3 +53,27 @@ from dual
 connect by level <= 12;
 
 -- 22. 15년도 월별 입사자의 수를 세어서 출력하시오. 단, 1월 12월까지 월별로 출력하시오. 입사자가 없는달은 0으로 출력하시오.
+select * 
+from (
+    select dept_id, to_char(start_date,'mm') 입사월
+    from s_emp
+    where extract (year from start_date) = 2015
+    )
+pivot (
+    count (*)
+    for 입사월
+    in ('01' "1월", 
+        '02' "2월", 
+        '03' "3월", 
+        '04' "4월", 
+        '05' "5월", 
+        '06' "6월", 
+        '07' "7월", 
+        '08' "8월", 
+        '09' "9월", 
+        '10' "10월", 
+        '11' "11월", 
+        '12' "12월"
+        )
+    )
+;
