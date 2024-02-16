@@ -156,6 +156,13 @@ where (dept_id, salary) in (
     )
 ;
 
+-- 32. inline view로 s_emp 테이블에서 사원인 직원들의 부서번호를 s_dept 테이블에서 찾아 직원들의 name, title, 부서명(name)을 출력하시오.
+select e.name, e.title, d.name
+from (select name, title, dept_id
+    from s_emp
+    where title = '사원') e, s_dept d
+where e.dept_id = d.id
+;
 
 -- 테이블 목록
 select *
