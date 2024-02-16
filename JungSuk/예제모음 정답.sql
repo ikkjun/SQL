@@ -164,15 +164,54 @@ from (select name, title, dept_id
 where e.dept_id = d.id
 ;
 
+-- 33. 가장 적은 평균 급여를 받는 직책에 대해 그 직책과 평균급여를 나타내시오.
+select title, avg(salary)
+from s_emp
+group by title
+having avg(salary) = (
+    select min(avg(salary))
+    from s_emp
+    group by title
+    )
+;
+
+-- 34. s_emp 테이블에서 dept_id가 113인 직원들의 id, name, mailid, start_date를 복사한 emp_113테이블을 만드시오.
+create table emp_113("직원id", "직원명", "메일아이디", "입사일")
+as select id, name, mailid, start_date
+from s_emp
+where dept_id = 113
+;
+
+-- 35. 예제 34에서 만든 테이블에 s_emp 테이블에서 입사일이 2016년 1월 1일 이전에 입사한 직원들의 id, name, mailid, start_date를 삽입하시오.
+insert into emp_113
+select id, name, mailid, start_date
+from s_emp
+where start_date < to_date('2016-01-01', 'yyyy-mm-dd')
+;
+
+-- 36. s_emp 테이블에서 name이 안창환인 사람의 dept_id를 title이 사장인 사람들의 부서번호로 변경해라
+update s_emp
+set dept_id = (select dept_id
+                from s_emp
+                where title = '사장')
+where name = '안창환'
+;
+
+
+
+
+
 -- 테이블 목록
+select *
+from s_emp
+;
+
 select *
 from s_customer
 ;
 
-select * from salgrade;
-
-select *
-from s_emp
+select * 
+from salgrade
 ;
 
 select *
@@ -182,3 +221,5 @@ from s_dept
 select *
 from s_region
 ;
+
+select * from emp_113;
