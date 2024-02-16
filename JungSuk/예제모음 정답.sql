@@ -51,3 +51,5 @@
 select to_char(add_months(sysdate,-1 * level), 'yyyymm') "최근 12개월 동안의 날짜" 
 from dual
 connect by level <= 12;
+
+-- 22. 15년도 월별 입사자의 수를 세어서 출력하시오. 단, 1월 12월까지 월별로 출력하시오. 입사자가 없는달은 0으로 출력하시오.
