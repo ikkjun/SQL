@@ -106,6 +106,14 @@ order by 사번
 ;
 
 -- 27. 직원 중에 '김정미' 와 같은 직책(title)을 가지는 사원의 이름과 직책, 급여, 부서번호를 나타내시오(SELF JOIN을 사용할 것)
+select t2.name, t1.title, t2.salary
+from s_emp t1, s_emp t2
+where t1.title = t2.title
+and t1.name = '김정미'
+and t2.name not like '김정미'
+;
+
+-- 28. dept_id가 110인 직원이름, 부서, 직급 테이블과 dept_id가 113인 테이블의 합집합을 나타내시오.
 
 select *
 from s_customer
