@@ -70,3 +70,11 @@
 -- 31. s_emp 테이블에서 부서별로 가장 적은 salary를 받는 직원의 name과 salary를 통해 직원의 name, dept_id, salary를 출력하시오.
 
 -- 32. inline view로 s_emp 테이블에서 사원인 직원들의 부서번호를 s_dept 테이블에서 찾아 직원들의 name, title, 부서명(name)을 출력하시오.
+
+-- 33. 가장 적은 평균 급여를 받는 직책에 대해 그 직책과 평균급여를 나타내시오.
+
+-- 34. s_emp 테이블에서 dept_id가 113인 직원들의 id, name, mailid, start_date를 복사한 emp_113테이블을 만드시오.
+
+-- 35. 예제 34에서 만든 테이블에 s_emp 테이블에서 입사일이 2016년 1월 1일 이전에 입사한 직원들의 id, name, mailid, start_date를 삽입하시오.
+
+-- 36. s_emp 테이블에서 name이 안창환인 사람의 dept_id를 title이 사장인 사람들의 부서번호로 변경해라
