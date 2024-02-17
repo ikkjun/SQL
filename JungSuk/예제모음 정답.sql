@@ -325,30 +325,3 @@ where not exists (select 'X'
                     from s_emp
                     where e.title = '사원')
 ;
-
-select avg(salary)
-from s_emp
-where dept_id = 102;
-
--- 테이블 목록
-select *
-from s_emp
-;
-
-select *
-from s_customer
-;
-
-select * 
-from salgrade
-;
-
-select *
-from s_dept
-;
-
-select *
-from s_region
-;
-
-select * from emp_113;
