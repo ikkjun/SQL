@@ -269,6 +269,29 @@ select id, name, salary, rank() over (order by salary desc) rank
 from s_emp
 ;
 
+-- 46. 부서(dept_id)별로 salary가 높은 사람이 1등이 되도록 하는 rank 컬럼, dept_id, name, salary를 출력하시오.
+select 
+    rank() over (
+        partition by dept_id
+        order by salary desc
+        ) as rank, dept_id, name, salary
+from s_emp
+;
+
+-- 47. 자신의 급여가 자신이 속한 부서의 평균 급여보다 적은 직원에 대해 이름, 급여, 부서번호를 출력하시오.
+select name, salary, dept_id
+from s_emp outer
+where salary < (select avg(salary)
+                from s_emp
+                where dept_id = outer.dept_id)
+;
+
+-- 48. 본인의 급여가 각 부서별 평균 급여 중 어느 한 부서의 평균 급여보다 적은 급여를 받는 직원에 대해 이름, 급여, 부서번호를 출력하시오.
+
+select avg(salary)
+from s_emp
+where dept_id = 102;
+
 -- 테이블 목록
 select *
 from s_emp
