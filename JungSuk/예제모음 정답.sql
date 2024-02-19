@@ -53,6 +53,10 @@ from dual
 connect by level <= 12;
 
 -- 22. 15년도 월별 입사자의 수를 세어서 출력하시오. 단, 1월 12월까지 월별로 출력하시오. 입사자가 없는달은 0으로 출력하시오.
+/*
+    없는게 나와야 한다. -> outer join을 사용해야 한다.
+    nvl(왼쪽 컬럼, 0)
+*/
 select * 
 from (
     select dept_id, to_char(start_date,'mm') 입사월
