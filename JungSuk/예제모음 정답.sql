@@ -82,6 +82,16 @@ pivot (
     )
 ;
 
+select 입사월, count(입사월) 입사인원
+from (select extract (month from start_date) 입사월
+    from s_emp
+    where extract (year from start_date) = 2015) t1, (select level from dual connect by level <= 12) t2
+
+group by 입사월
+;
+
+
+
 -- 23. 직원(S_EMP)테이블과 부서(S_DEPT)테이블을 JOIN하여, 사원의 이름과 부서, 부서명을 나타내시오.
 select e.name, d.id, d.name
 from s_emp e, s_dept d
